@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=default-width, height=default-height, target-densitydpi=device-dpi" /> <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+        <link rel="stylesheet" href="css/jalf_theme.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure.min.css" /> 
+     
+        <link rel="stylesheet" type="text/css" href="css/index.css" /> 
+    </head> 
+    <body>
+        <div data-role="page"  data-theme="a">
+            <div data-role="header" data-theme="a">
+                <a data-rel="back" data-role="button" data-inline="true" data-theme="a">Back</a> 
+                <h1>Compose</h1>
+                
+            </div>
+            <div data-role="content"  data-theme="a">
+                <script type="text/javascript" src="js/index.js"></script> 
+                <script type="text/javascript" src="js/main.js"></script>  
+                <script type="text/javascript" src="js/ComposeMessage.js"></script>               
+                <script type="text/javascript">
+                    document.addEventListener("deviceready", function() { 
+                        console.log('load compose message deviceready'); 
+                        
+                    });
+                    document.addEventListener("throttledresize", function() { alert("throttledresize fired.") }, false);
+                    document.addEventListener("orientationchange", function() { alert("orientationchange fired.") }, false);
+                    $(document).ready(function(){
+                        
+                        console.log('compose message document ready');
+                        $(".inpt").blur(function() {
+                            $("[data-role=footer]").show();
+                        });
+                        
+                        $(".inpt").focus(function() {
+                            $("[data-role=footer]").hide();
+                        });
+                    });
+                    
+                </script>  
+                <div id="mail_compose" >
+                    <div data-role="fieldcontain">
+                        <label for="txtTo">
+                            To:
+                        </label>
+                        <input name="txtTo" class="inpt" id="txtTo" placeholder="" value="" type="text"  data-theme="a">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="txtsubject">
+                            Subject:
+                        </label>
+                        <input name="txtsubject" class="inpt"  id="txtsubject" placeholder="" value="" type="text" data-theme="a">
+                    </div>
+                    <div  data-role="fieldcontain">
+                        <label for="txtBody">
+                            Body:
+                        </label>
+                        <textarea class="Bodymessage inpt" name="txtBody" id="txtBody" placeholder=""></textarea>
+                    </div>
+                    <!--
+<div data-role="fieldcontain">
+<label for="chkCopytoSent">
+Copy in Sent items:
+</label>
+<select name="chkCopytoSent" id="chkCopytoSent" data-theme="a" data-role="slider">
+<option value="0">
+No
+</option>
+<option value="1">
+Yes
+</option>
+</select>
+</div>
+-->
+                    <!--
+<div data-role="fieldcontain">
+<label for="chkCanReply">
+This message can be replied:
+</label>
+<select name="chkCanReply" id="chkCanReply" data-theme="a" data-role="slider">
+<option value="0">
+No
+</option>
+<option value="1">
+Yes
+</option>
+</select>
+</div> 
+-->
+                    <div data-role="fieldcontain">
+                        <label for="btnSend">  </label>
+                        <input id="btnSend" type="button" data-inline="true"  href="javascript:void(0);" name="btnSend" value="Send"
+                               data-theme="a"   data-icon="forward" data-iconpos="left"/>
+                    </div> 
+                </div>
+            </div> 
+           <div data-theme="a" data-role="footer"  data-position="fixed">
+                <div data-role="navbar" >  
+                    <ul>  
+                        <li><a rel="external" id="amailbox" href="mailbox.html"   data-icon="jalf-email"  > MailBox </a></li>
+                        <li><a rel="external"  id="afavorites" href="favorites.html" data-icon="jalf-favorites"> Favorites </a></li>  
+                        <li><a  rel="external" id="asearch" href="search.html" data-icon="jalf-search"> Search </a></li> 
+                        <li><a  rel="external" id="aphotos" href="AlbumCategory.html" data-icon="jalf-photos"> Photos </a></li> 
+                        <li><a  rel="external" id="alocation" href="location.html" data-icon="jalf-location"> Location </a></li> 
+                    </ul>  
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>

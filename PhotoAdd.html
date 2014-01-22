@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=default-width, height=default-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jalf_theme.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.mobile.min.js"></script> 
+        <script src="js/jquery.filestyle.js" type="text/javascript"></script>
+        
+    </head>
+    <body> 
+        <div data-role="page"  data-theme="a">
+            <div data-role="header" data-theme="a">
+                <!--                <a rel="external" data-role="button" href="AlbumCategory.html" data-inline="true" data-theme="a">albums</a>-->
+                <a data-rel="back" href="javascript:void(0);"  data-role="button" data-inline="true" data-theme="a">Back</a>
+                <h1>Add Photos</h1>
+            </div>
+            <div data-role="content"  data-theme="a"> 
+                
+                <style>
+                    
+                    .file-upload {
+                        position: relative;
+                    }
+                    .file-upload input {
+                        position: absolute;
+                        visibility: hidden;
+                        top: 0;
+                        left: 0; 
+                    }
+                </style>
+                
+                <script type="text/javascript"  src="js/main.js"></script> 
+                <script type="text/javascript" src="js/AlbumCategory.js"></script>    
+                <script type="text/javascript">                     
+                    $(document).ready(function(){ 
+//                        $("input[type=file]").filestyle({ 
+//                            image: "choose-file.gif",
+//                            imageheight : 22,
+//                            imagewidth : 82,
+//                            width : 250
+//                        }); 
+                        
+                        try{                            
+                            console.log('photo add documentready function');
+                        }
+                        catch(e)
+                        {
+                            alert(e);
+                        }
+                        
+                    });
+                    
+                    
+                </script> 
+                <form method="POST" action="">
+                    <textarea name="txtComment" id="txtComments" placeholder="Comments"></textarea>
+                    <label data-role="button" class="file-upload">Select Picture
+                        <input type="file" id="photo_file" name="photo_file"/>
+                    </label>
+                    <input id="btnSave" data-inline="false" data-icon="plus" data-iconpos="left"  onclick="SavePhoto();"  value="Save and upload" data-mini="false" type="submit"/> 
+                    <!--                <a id="btnSave" data-role="button" data-inline="false" href="javascript:void(0);" data-icon="plus" data-iconpos="left"  onclick="SavePhoto();" data-mini="false">Save and upload</a>-->
+                    <div data-role="fieldcontain">
+                        <label for="flip-6">Show in public:&nbsp;&nbsp;</label>
+                        <select name="flip" id="flip" data-role="slider">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div> 
+                </form>
+                
+                <!--
+<label id='lblimage'  style="margin:0 auto; background-color: #fbfbfb; border: 1px solid #b8b8b8;display:none;" class="hideme">Image Path</label>    
+<label id='lblpath'  class="hideme" style="display:none;" ></label> 
+-->
+            </div>
+            <div data-theme="a" data-role="footer"   data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar" >  
+                    <ul>  
+                        <li><a id="amailbox" href="mailbox.html"   data-icon="jalf-email"  > MailBox </a></li>  
+                        <li><a id="afavorites" href="favorites.html" data-icon="jalf-favorites"> Favorites </a></li>  
+                        <li><a id="asearch" href="search.html" data-icon="jalf-search"> Search </a></li> 
+                        <li><a id="aphotos" href="AlbumCategory.html" data-icon="jalf-photos"> Photos </a></li> 
+                        <li><a id="alocation" href="location.html" data-icon="jalf-location"> Location </a></li> 
+                    </ul>  
+                </div> 
+            </div>
+        </div> 
+        
+    </body>    
+</html>

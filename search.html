@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=default-width, height=default-height, target-densitydpi=device-dpi" />  <link rel="stylesheet" href="css/jalf_theme.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure.min.css" /> 
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.mobile.min.js"></script> 
+        
+    </head>
+    <body> 
+        <div data-role="page"  data-theme="a" data-dom-cache="true">
+            <div data-role="header"   data-theme="a">
+                <!--<a data-rel="back" data-role="button" data-inline="true" data-theme="a">Back</a> --> 
+                <h1>Search</h1> 
+            </div> 
+            <div data-role="content"  data-theme="a">
+                <link rel="stylesheet" type="text/css" href="css/index.css" />
+                <script type="text/javascript" src="js/index.js" ></script>
+                <script type="text/javascript" src="js/main.js" ></script>
+                <script type="text/javascript" src="js/search.js"></script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $('#dvPager').hide();
+                        console.log('document ready search function');                        
+                    });
+                    document.addEventListener("deviceready", function() {   
+                        console.log('device ready search function');
+                    }); 
+                </script>
+                <style> 
+                    .ui-controlgroup-controls{
+                        display: table!important;
+                        width:95%;
+                        margin: 0 auto;
+                    }
+                    
+                    .ui-disabled {
+                        opacity: 1;
+                    }
+                    
+                    .ui-checkbox .ui-btn-icon-left .ui-btn-inner, .ui-radio .ui-btn-icon-left .ui-btn-inner {
+                        padding-left: 0px;
+                    }
+                    .ui-checkbox .ui-btn-inner, .ui-radio .ui-btn-inner {
+                        white-space: normal;
+                    }
+                    .ui-btn-icon-right .ui-btn-inner {
+                        padding-right: 0px;
+                    }
+                    .ui-btn-icon-left .ui-btn-inner {
+                        padding-left: 0px;
+                    }
+                    .ui-fullsize .ui-btn-inner, .ui-fullsize .ui-btn-inner {
+                        font-size: 16px;
+                        padding: 0px;
+                    }
+                    
+                </style> 
+                <div id='dvCount' style='display:none;'></div> 
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" style="width:70%">
+                        <input type="search" id="txtsearch" class="txt" placeholder="Search..."  />
+                    </div>
+                    <div class="ui-block-b" style=" float: right;  margin-right: 55px;  margin-top: 7px;  width: 10%;">
+                        <a href="javascript:void(0);" data-role="button" data-mini="true"  id="btnsearch"     data-inline="true"  data-theme="a" >Search</a>
+                    </div> 
+                    <div class='mtMessage'> <div id='mtMessage'></div></div> 
+                </div> 
+                
+                <ul id="ulSearch" data-role="listview"    data-theme="a"  data-inset="true" style="margin:0px; font-size:18px;padding-bottom:90px;" >  </ul> 
+                
+                <div class='mtMessage'> <div id='mtMessage'></div></div> 
+            </div>
+            <div data-theme="a" data-role="footer"   data-position="fixed" data-tap-toggle="false">
+                <div   data-role="controlgroup" id="dvPager" data-type="horizontal" style="width: 50%;  margin: 0 auto;" >
+                    <a   href="javascript:void(0);"  data-role="button"  id="aPreviousPage"  class="Button" onclick="PreviousPage()" data-theme="a" data-icon="arrow-l" data-iconpos="left" style="width:35%;">&nbsp;</a>
+                    <a data-role="button" id="aPager" class="ui-disabled" data-theme="a"  style="width:25%;">0</a>
+                    <a   href="javascript:void(0);"  data-role="button" id="aNextPage"  onclick="NextPage()"   data-icon="arrow-r"  data-theme="a" data-iconpos="right" data-inline="true" style="width:35%;">&nbsp;</a>
+                </div>
+                <div data-role="navbar" >  
+                    <ul>  
+                        <li><a id="amailbox" href="mailbox.html"   data-icon="jalf-email"  > MailBox </a></li>  
+                        <li><a id="afavorites" href="favorites.html" data-icon="jalf-favorites"> Favorites </a></li>  
+                        <!--                        <li><a id="asearch" href="search.html" data-icon="jalf-search"> Search </a></li> -->
+                        <li><a id="aphotos" href="AlbumCategory.html" data-icon="jalf-photos"> Photos </a></li> 
+                        <li><a id="alocation" href="location.html" data-icon="jalf-location"> Location </a></li> 
+                    </ul>  
+                </div> 
+            </div>
+            
+        </div>
+    </body>
+</html>

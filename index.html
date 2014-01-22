@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <title>Login</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="css/jalf_theme.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.mobile.min.js"></script> 
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+            
+            <div data-role="content" data-theme="a"> 
+                <form     id="frmLogin"  action="javascript:GetAction(this);" method="POST">
+                    <div id="tblLogin" class="ui-grid-a loginview">
+                        <div class="ui-block-a" style=" width: 35%;  padding-top: 15px;">
+                            <label for="txtid">Member:</label>
+                        </div>
+                        <div class="ui-block-b" style=" width: 65%;">
+                            <input type="text" id="txtid" value="cendre" name="user_name"  placeholder="Enter login id" class="txt1" data-theme="a" />
+                        </div>
+                        <div class="ui-block-a" style=" width: 35%;
+                                                       padding-top: 15px;">
+                            <label  for="txtpwd">Password:</label>
+                            
+                        </div>
+                        <div class="ui-block-b" style=" width: 65%;">
+                            <input type="password" id="txtpwd" value="cendre123" name="password" placeholder="Enter Password" class="txt1" data-theme="a" />
+                        </div>
+                    </div>
+                    <div class="login-button-block">
+                        <input  id="btnlogin"  type="submit" name="btnlogin"  data-inline="true"  data-theme="a" value="Login" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

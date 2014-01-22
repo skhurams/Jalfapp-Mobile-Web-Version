@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html>
+    <head>        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=default-width, height=default-height, target-densitydpi=device-dpi" />   <link rel="stylesheet" href="css/jalf_theme.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure.min.css" /> 
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.mobile.min.js"></script> 
+        
+        
+    </head>
+    <body>
+        <div data-role="page"  data-theme="a" data-dom-cache="true"> 
+            <link rel="stylesheet" type="text/css" href="css/index.css" />
+            <style>
+                .msgBody{
+                    background-color:White;
+                    color:Black;
+                    min-height:300px;
+                }
+            </style>
+            <script type="text/javascript" src="js/index.js"></script>
+            <script type="text/javascript" src="js/main.js"></script>
+            <script type="text/javascript" src="js/mailboxList.js"></script> 
+            <div data-role="header"  data-theme="a">
+                <a data-rel="back"   href="javascript:void(0);"  data-role="button" data-inline="true" data-theme="a">Back</a>
+                <h1>Message</h1>
+                 <a data-role="button" id="btnReply" href="javascript:void(0);" onclick="Reply();"   data-inline="true" data-theme="a"> Reply </a>
+            </div>
+            <div data-role="content"  data-theme="a"> 
+                
+                <script type="text/javascript">
+                    $(document).ready(function(){ 
+                        console.log('messagebox document ready');  
+                    });
+                    
+                </script>  
+                 <ul id="ulMessage" data-role="listview" data-theme="a"  data-inset="true" style="margin:0px; font-size:18px;padding-bottom:90px;" > 
+                
+                </ul>  
+            </div>    
+            <div data-role="footer" data-position="fixed"  data-tap-toggle="false"   data-theme="a">                 
+                <div data-role="controlgroup" data-type="horizontal" style="padding-left:2%;padding-right:2%;">
+                    <a href="#" data-role="button"  data-inline="true"   data-theme="a">No Thanks </a>
+                    
+                    <a href="#" data-role="button" class="ui-btn-right"  data-inline="true" data-theme="a" data-icon="edit" data-iconpos="notext">Edit</a> 
+                </div>
+            </div>
+            <div data-theme="a" data-role="footer"   data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar" >  
+                    <ul>  
+                        <li><a id="amailbox" href="mailbox.html"   data-icon="jalf-email"  > MailBox </a></li>  
+                        <li><a id="afavorites" href="favorites.html" data-icon="jalf-favorites"> Favorites </a></li>  
+                        <li><a id="asearch" href="search.html" data-icon="jalf-search"> Search </a></li> 
+                        <li><a id="aphotos" href="AlbumCategory.html" data-icon="jalf-photos"> Photos </a></li> 
+                        <li><a id="alocation" href="location.html" data-icon="jalf-location"> Location </a></li> 
+                    </ul>  
+                </div> 
+            </div>
+        </div>
+    </body> 
+</html>
